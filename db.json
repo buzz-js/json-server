@@ -1,0 +1,24 @@
+{
+  "playlists": [],
+  "series": [
+    {
+      "id": "258e7be5-d672-4d92-82e9-40a2d85f3554",
+      "title": "Serie 1",
+      "overview": "lol"
+    }
+  ],
+  "episodes": [
+    {
+      "id": "258e7be5-d672-4d92-82e9-40a2d85f3555",
+      "title": "Episode 1",
+      "overview": "omg",
+      "serie_id": "258e7be5-d672-4d92-82e9-40a2d85f3554"
+    },
+    {
+      "id": "258e7be5-d672-4d92-82e9-40a2d85f3556",
+      "title": "Episode 2",
+      "overview": "omg",
+      "serie_id": "258e7be5-d672-4d92-82e9-40a2d85f3554"
+    }
+  ]
+}
