@@ -1,5 +1,5 @@
 const { initConnection } = require("../database");
-const { v4 } = require("uuid");
+const shortid = require("shortid");
 
 module.exports = {
   index: async (_, res) => {
@@ -9,7 +9,7 @@ module.exports = {
   },
   store: async (req, res) => {
     const { title, overview } = req.body;
-    const serie = { id: v4(), title, overview };
+    const serie = { id: shortid.generate(), title, overview };
     const db = await initConnection();
     db.get("series").push(serie).write();
     res.json(serie);

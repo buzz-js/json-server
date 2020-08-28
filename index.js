@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const path = require("path");
 
 const app = express();
 
@@ -21,6 +22,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routes
-app.use("/api", require("./routes"));
+app.get("/", (_, res) =>
+  res.sendFile(path.join(__dirname, "public/index.html"))
+);
+
+app.use("/uploads", require("./routes/uploads"));
+app.use("/api", require("./routes/api"));
 
 app.listen("1802", () => console.log("Server listening"));

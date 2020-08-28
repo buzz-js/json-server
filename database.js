@@ -6,7 +6,7 @@ async function initConnection() {
   const db = await low(adapter);
 
   // Set defaults
-  db.defaults({ playlists: [], series: [], episodes: [] }).write();
+  db.defaults({ playlists: [], series: [], episodes: [], videos: [] }).write();
 
   return db;
 }
